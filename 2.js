@@ -13,13 +13,17 @@ async function getBudgetId(ynabAPI) {
 };
 
 async function getAccounts(ynabAPI, budget_id) {
-	consloe.log(JSON.stringify(ynabAPI));
+	console.log(JSON.stringify(ynabAPI));
 	console.log("******************");
 	const response = ynabAPI.accounts.getAccounts(budget_id)
-	const accounts = response.data.accounts;
-	for (let account of accounts) {
-		console.log(`Account id: ${account.id} Name: ${account.name}`);
-	}
+	response.then(data => {
+		console.log(`data=${JSON.stringify(data)}`);
+  	const accounts = data.data.accounts;
+		console.log(`accounts=${accounts}`);
+		for (let account of accounts) {
+		  console.log(`Account id: ${account.id} Name: ${account.name}`);
+	  }
+	});
 };
 
 console.log('starting...');
@@ -28,8 +32,8 @@ const token = require("./config-ynab");
 console.log(token.accessToken);
 const ynabAPI = new ynab.API(token.accessToken);
 const response = getBudgetId(ynabAPI);
-response.then(budgetId => console.log(`after then: budgetId=${budgetId}`));
-console.log(JSON.stringify(ynabAPI));
-console.log("******************");
-// getAccounts(ynabAPI, budgetId);
+response.then(budgetId => {
+  console.log(`after then: budgetId=${budgetId}`);
+  getAccounts(ynabAPI, budgetId);
+});
 

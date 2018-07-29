@@ -7,6 +7,6 @@ const ynabAPI = new ynab.API(token.accessToken);
   const budgetsResponse = await ynabAPI.budgets.getBudgets();
   const budgets = budgetsResponse.data.budgets;
   for(let budget of budgets) {
-    console.log(`Budget Name: ${budget.name}`);
+    console.log(`Budget id: ${budget.id} Name: ${budget.name}`);
   }
 })();
