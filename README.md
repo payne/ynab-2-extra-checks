@@ -1,5 +1,16 @@
 Trying to learn the YNAB API.  The script 2.js "works"; run it like this: `node 2.js`
 
+
+
+# Create a `config-ynab.js` file that looks like this:
+```
+module.exports={
+  accessToken:  'your-secret-access-token-from-ynab.'
+}
+```
+Note, that config-ynab.js is in `.gitignore` so it's not accidentidly committed.
+
+
 Example output:
 ```
 starting...
