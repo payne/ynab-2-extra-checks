@@ -17,6 +17,13 @@ async function getCategories(ynabAPI, budget_id) {
   	const categories = data.data.category_groups;
 		for (let category of categories) {
 		  console.log(`Category id: ${category.id} Name: ${category.name}`);
+			if ('Dreams' === category.name) {
+				cats = category.categories;
+				for (let c of cats) {
+					// Why divide by 1000???
+					console.log(`\t${c.name}\t${c.balance / 1000.0}`); 
+				}
+			}
 	  }
 	});
 };
@@ -26,7 +33,7 @@ async function getAccounts(ynabAPI, budget_id) {
 	response.then(data => {
   	const accounts = data.data.accounts;
 		for (let account of accounts) {
-		  console.log(`Account id: ${account.id} Name: ${account.name}`);
+		  console.log(`Account id: ${account.id} Name: ${account.name} ${account.balance / 1000.0}`);
 	  }
 	});
 };
