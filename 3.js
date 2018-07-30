@@ -17,7 +17,7 @@ async function getCategories(ynabAPI, budget_id) {
   	const categories = data.data.category_groups;
 		for (let category of categories) {
 		  console.log(`Category id: ${category.id} Name: ${category.name}`);
-			if ('Dreams' === category.name) {
+			if ('Savings' === category.name) {
 				cats = category.categories;
 				for (let c of cats) {
 					// Why divide by 1000???
