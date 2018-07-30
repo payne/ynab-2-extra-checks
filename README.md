@@ -48,3 +48,22 @@ Category id: b3e7cc41-b68d-4cc5-aee0-8b69cb90a2fa Name: Just for Fun
 Category id: 5a6b41af-336c-46e1-86a1-b3d0d4ecc30e Name: Hidden Categories
 ```
 
+# node 3.js as of 7/30/2018
+
+```
+after then: budgetId=48e5fa77-41fa-4c84-aa15-3ec343b48b4f
+Account id: 9c071ba3-53ab-40f0-a5a6-2d7f045a8696 Name: Checking 1000
+Account id: fcb1c436-4e51-42e4-9b61-a48f8a5702d4 Name: Savings 3000
+Category id: de62383b-1055-4d2c-a3f5-0b44c6215ca1 Name: Savings
+	Rainy Day	1000
+	Big Trip	2000
+Category id: 3ade7a53-99e9-449e-9e3a-e16ebe1f6760 Name: Internal Master Category
+Category id: bd4ccd42-7b4a-472a-9ed1-a3def16b1628 Name: Credit Card Payments
+Category id: 1bc548ca-16f7-4cf9-a7c1-eb01758d976a Name: Immediate Obligations
+Category id: 66091fb2-3a5e-4a18-892f-313559f12190 Name: True Expenses
+Category id: 61a7fcd8-f9db-4c99-a779-3a6add87d02a Name: Debt Payments
+Category id: 4d761bf0-9396-4a6b-b340-4612db0a945f Name: Quality of Life Goals
+Category id: c643dd8a-48eb-433f-a131-68a8abf892d5 Name: Just for Fun
+Category id: bcfcd80e-ca54-462e-bcb6-e37162199c1f Name: Hidden Categories
+```
+
